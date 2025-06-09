@@ -1,31 +1,44 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Oswald:wght@200..700&display=swap');
 
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.965);
-    font-family: 'Exo 2', sans-serif;
 }
-
 
 header {
     background-color: black;
-    margin: 0 0 15px ;
-    padding: 5px 5px;
-
+    margin: 0 0 15px;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-
-
-nav, ul, li, a {
+button, li, a {
     font-size: 15px;
     color: rgb(255, 255, 255);
     text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 50px
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links:hover li a {
+    color: rgb(255, 0, 0);
 }
 
 .logotipo {
@@ -33,7 +46,35 @@ nav, ul, li, a {
     height: 50px;
 }
 
+button {
+    background-color: rgb(0, 209, 241);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Ancizar Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    cursor: pointer;
+}
 
 
+@media (max-width: 800px) {
+    .logotipo {
+        width: 45px;
+        height: 40px;
+    }
 
+    .nav-links li {
+        padding: 5px 0;
+    }
 
+    li, a, button {
+        font-size: 12px;
+    }
+    
+    button {
+        padding: 5px 10px;
+    }
+}
